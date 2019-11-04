@@ -1,0 +1,27 @@
+@charset 'utf-8';
+@import "./partials/breakpoints";
+@import "./partials/fonts";
+@import "./partials/colors";
+@import "./partials/header";
+@import "./partials/aside";
+@import "./partials/main";
+@import "./partials/comments";
+
+body {
+  font-family: "AvenirRegular", "AvenirMedium", "AvenirBold";
+  width: 100vw;
+  margin: 0;
+}
+
+*,
+* *:after {
+  box-sizing: inherit;
+}
+
+@include huge {
+  .section-divisor {
+    width: 60vw;
+    display: flex;
+    position: relative;
+  }
+}

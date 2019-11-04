@@ -1,0 +1,91 @@
+.aside {
+  &__main-title {
+    color: $Silver;
+    font-family: AvenirDemi;
+    font-size: 4vw;
+    margin: 12vw 5vw;
+  }
+  &__next-videos {
+    margin: 7.5vw 5vw;
+    display: flex;
+    align-items: end;
+  }
+  &__div-titles {
+    display: flex;
+    flex-direction: column;
+  }
+  &__photos {
+    width: 37.5vw;
+    height: 23vw;
+    border-radius: 1.5vw;
+    margin-right: 4vw;
+  }
+  &__descript {
+    font-family: AvenirMedium;
+    font-size: 5vw;
+    margin: 0;
+  }
+  &__text {
+    font-family: AvenirLight;
+    margin: 3vw 0;
+  }
+}
+
+@include medium {
+  .aside {
+    &__photos {
+      width: 15.6vw;
+      height: 9.1vw;
+      border-radius: 0.5vw;
+      margin-right: 2vw;
+    }
+    &__descript {
+      font-size: 1.8vw;
+    }
+    &__text {
+      font-size: 1.5vw;
+      margin: 1vw 0;
+    }
+    &__main-title {
+      font-size: 1.5vw;
+      margin: 5.2vw 3.1vw;
+    }
+    &__next-videos {
+      margin: 2.5vw 3.1vw;
+    }
+  }
+}
+
+@include huge {
+  .aside {
+    position: absolute;
+    left: 63vw;
+    padding-right: 20vw;
+    margin-top: 4.2vw;
+    margin-left: 1.5vw;
+    padding: 0;
+    &__photos {
+      width: 8.3vw;
+      height: 4.86vw;
+      margin-right: 1.5vw;
+      border-radius: 0.3vw;
+    }
+    &__descript {
+      font-size: 1vw;
+    }
+    &__text {
+      font-size: 0.9vw;
+      margin: 0.5vw 0;
+    }
+    &__main-title {
+      font-size: 1vw;
+      margin: 1.8vw;
+    }
+    &__next-videos {
+      margin: 1.8vw;
+    }
+    &__map-videos {
+      width: 25vw;
+    }
+  }
+}

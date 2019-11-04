@@ -1,0 +1,381 @@
+.comments {
+  &__main__video-title {
+    font-family: AvenirBold;
+    font-size: 8vw;
+    margin: 5vw;
+  }
+
+  &__main__video-mix {
+    display: flex;
+    align-items: center;
+  }
+  &__main__video-subtitle {
+    font-size: 5vw;
+    font-family: AvenirMedium;
+    margin-left: 5vw;
+  }
+  &__main__video-date {
+    font-size: 5vw;
+    color: $Silver;
+    margin-left: 5vw;
+    font-family: AvenirRegular;
+  }
+  &__main__video-icons {
+    margin-right: 3vw;
+  }
+
+  &__main__video-icon-views {
+    display: flex;
+    margin: 0 5vw;
+  }
+  &__main__video-icon-likes {
+    display: flex;
+  }
+  &__main__video-text-div {
+    margin: 5vw 0 12vw 0;
+    border-top: solid 0.2vw $Mercury;
+  }
+  &__main__video-text {
+    font-size: 4.5vw;
+    line-height: 7vw;
+    font-family: AvenirLight;
+    margin: 7.5vw 0 7.5vw 5vw;
+  }
+  &__main__video-box {
+    display: flex;
+  }
+
+  /////////
+  &__title {
+    font-size: 1.5em;
+    margin: 12.5vw 5vw 10vw 5vw;
+    font-family: AvenirDemi;
+  }
+  &__input {
+    margin-bottom: 7.5vw;
+  }
+  &__input-box {
+    display: flex;
+    border-bottom: solid 0.2vw $Mercury;
+  }
+  &__side-img {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 100%;
+    margin: 5vw;
+    margin-right: 7vw;
+  }
+
+  &__input-label {
+    color: $Silver;
+    font-family: AvenirDemi;
+    font-size: 3.2vw;
+  }
+  &__text-area {
+    width: 62vw;
+    height: 27vw;
+    box-sizing: border-box;
+    border: 0.4vw solid $Mercury;
+    border-radius: 1.2vw;
+    background-color: $Alabaster;
+    resize: none;
+    margin: 3vw 0 3vw;
+    // padding: 5vw;
+    font-family: AvenirLight;
+    padding: 4vw;
+    &:active {
+      border: 0.4vw solid $Brainflix-blu;
+    }
+  }
+  &__button {
+    background-color: $Brainflix-blu;
+    border-radius: 2vw;
+    color: white;
+    padding: 15px 32px;
+    font-size: 4vw;
+    border-style: none;
+    cursor: pointer;
+    width: 42vw;
+
+    &:hover {
+      background-color: $Brainflix-blue;
+    }
+  }
+}
+
+.div__comment {
+  border-bottom: solid 0.2vw $Mercury;
+  display: flex;
+  flex-direction: column;
+  margin: 3vw;
+  padding: 3vw 0;
+
+  &-avatar {
+    background-color: $Mercury;
+    border-radius: 100vw;
+    width: 11vw;
+    height: 11vw;
+    padding: 0;
+    border-style: none;
+    align-self: flex-end;
+  }
+
+  &-name-and-time {
+    display: flex;
+    align-items: baseline;
+  }
+  &-name {
+    margin: 3vw 7vw 3vw 3vw;
+    font-family: AvenirMedium;
+    font-size: 5vw;
+    height: 7vw;
+  }
+
+  &-timestamp {
+    color: $Silver;
+    justify-self: end;
+    font-family: AvenirRegular;
+    font-size: 4vw;
+  }
+
+  &-com {
+    width: 100vw;
+    margin: 0 0 2vw 15vw;
+    text-align: left;
+    font-family: AvenirLight;
+    font-size: 4.5vw;
+    line-height: 6vw;
+    width: fit-content;
+  }
+}
+
+@include medium {
+  .comments {
+    &__main__video-title {
+      font-size: 4.5vw;
+      margin: 3.1vw;
+    }
+    &__main__video-subtitle {
+      font-size: 2vw;
+      margin-left: 3.1vw;
+    }
+    &__main__video-date {
+      font-size: 2vw;
+      margin-left: 1.5vw;
+    }
+    &__main__video-box {
+      font-size: 1.8vw;
+      margin-right: 3.1vw;
+    }
+    &__main__video-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__main__video-icon-views {
+      margin: 0 2.8vw;
+    }
+    &__main__video-icons {
+      margin-right: 1vw;
+    }
+    &__main__video-text {
+      font-size: 1.8vw;
+      line-height: 3vw;
+      width: 66vw;
+      margin: 5.2vw 3.1vw;
+    }
+    &__main__video-text-div {
+      border-top: solid 0.1vw $Mercury;
+      margin: 2vw;
+    }
+
+    &__title {
+      font-size: 2.2vw;
+      margin: 3.1vw;
+      margin-bottom: 4vw;
+    }
+    &__side-img {
+      width: 7vw;
+      height: 7vw;
+      margin: 2vw 3.5vw 2vw 3.1vw;
+    }
+    &__text-area {
+      width: 57.3vw;
+      border: 0.2vw solid $Mercury;
+      border-radius: 0.8vw;
+      margin: 1vw 0;
+      height: 7.7vw;
+      padding: 1.5vw;
+
+      &:active {
+        border: 0.2vw solid $Brainflix-blu;
+      }
+    }
+    &__input-label {
+      font-size: 1.5vw;
+    }
+    &__button {
+      font-size: 1.7vw;
+      padding: 1vw;
+      border-radius: 0.8vw;
+      width: 18vw;
+      height: 5vw;
+      margin: 0 3vw;
+    }
+    &__com-and-label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2vw;
+    }
+    &__input {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    &__input-box {
+      border-bottom: solid 0.1vw $Mercury;
+    }
+  }
+
+  .div__comment {
+    border-bottom: solid 0.1vw $Mercury;
+    margin: 0;
+    padding: 1vw 3.1vw 0 3.1vw;
+
+    &-avatar {
+      width: 5vw;
+      height: 5vw;
+    }
+    &-name {
+      font-size: 1.8vw;
+      height: 3vw;
+      width: fit-content;
+      padding-top: 1.5vw;
+      margin: 0.5vw 2vw;
+    }
+    &-name-and-time {
+      align-items: center;
+    }
+    &-timestamp {
+      font-size: 1.8vw;
+      font-family: AvenirLight;
+      padding-top: 1vw;
+      margin: 0.5vw 2vw;
+    }
+    &-com {
+      font-size: 1.5vw;
+      line-height: 2.5vw;
+      width: 81.2vw;
+      margin: 0 2vw 2.5vw 7vw;
+    }
+  }
+}
+
+@include huge {
+  .comments {
+    &__main__video-title {
+      font-size: 2vw;
+      margin: 3vw 0 1vw 11vw;
+    }
+    &__main__video-subtitle {
+      font-size: 1vw;
+      margin: 0;
+    }
+    &__main__video-date {
+      font-size: 1vw;
+    }
+    &__main__video-mix {
+      margin-left: 11vw;
+    }
+    &__main__video-box {
+      font-size: 0.9vw;
+    }
+    &__main__video-text {
+      margin: 3vw;
+      width: 41vw;
+      font-size: 0.9vw;
+      line-height: 1.6vw;
+    }
+    &__main__video-text-div {
+      margin: 1vw 0 0.5vw 8vw;
+    }
+
+    //////////
+    &__form {
+      width: 60vw;
+    }
+
+    &__input-label {
+      font-size: 0.9vw;
+    }
+    &__input {
+      margin-bottom: 1vw;
+    }
+    &__area {
+      margin-bottom: 2vw;
+    }
+
+    &__side-img {
+      width: 3vw;
+      height: 3vw;
+      margin: 1.7vw 1vw 2vw 0;
+    }
+    &__text-area {
+      width: 30vw;
+      border: 0.1vw solid $Mercury;
+      height: 3.5vw;
+      border-radius: 0.4vw;
+      margin: 0.5vw 0 0 0;
+      padding: 0.8vw 1.8vw;
+
+      &:active {
+        border: 0.1vw solid $Brainflix-blu;
+      }
+    }
+    &__title {
+      font-size: 1.1vw;
+      margin: 3vw 0 2.5vw 11vw;
+    }
+    &__button {
+      width: 12vw;
+      height: 3.2vw;
+      padding: 0.1vw;
+      font-size: 0.9vw;
+      border-radius: 0.4vw;
+      margin: 0 1vw 0.4vw;
+      border-style: none;
+    }
+    &__input-box {
+      width: fit-content;
+      justify-content: flex-end;
+      margin-left: 11vw;
+    }
+  }
+  .div__comment {
+    margin: 0;
+    margin-left: 11vw;
+    padding-top: 0;
+    &-avatar {
+      width: 2.5vw;
+      height: 2.5vw;
+    }
+    &-name {
+      font-size: 1vw;
+      height: 1.6vw;
+      margin: 0 1vw;
+    }
+    &-name-and-time {
+      height: 4vw;
+    }
+
+    &-timestamp {
+      font-size: 1vw;
+    }
+    &-com {
+      font-size: 0.9vw;
+      line-height: 1.5vw;
+      width: 40vw;
+      margin: 0 0 1vw 3.5vw;
+    }
+  }
+}
