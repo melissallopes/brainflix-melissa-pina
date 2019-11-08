@@ -1,0 +1,161 @@
+.nav-bar {
+  height: 52.8vw;
+
+  &__logo {
+    width: 50vw;
+    height: 15vw;
+    display: block;
+    margin: 2vw auto;
+  }
+  &__input {
+    width: 90vw;
+    height: 13vw;
+    box-sizing: border-box;
+    border: 0.4vw solid $Mercury;
+    border-radius: 1.2vw;
+    background-image: url("../assets/icons/SVG/search.svg");
+    background-repeat: no-repeat;
+    background-color: $Alabaster;
+    background-position-y: center;
+    background-position-x: 4vw;
+    padding: 1vw 12vw;
+    font-size: 4vw;
+  }
+  &__input-box {
+    width: 100vw;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__button-and-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__button {
+    background-image: url("../assets/icons/SVG/upload.svg");
+    background-repeat: no-repeat;
+    background-color: $Brainflix-blu;
+    background-size: 6vw;
+    background-position-x: 14vw;
+    background-position-y: center;
+    border-radius: 2vw;
+    color: white;
+    font-family: AvenirMedium;
+    font-size: 4vw;
+    cursor: pointer;
+    border-style: none;
+
+    width: 63vw;
+    height: 13vw;
+    margin-right: 4vw;
+
+    &:hover {
+      background-color: $Brainflix-blue;
+    }
+  }
+  &__image {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 100%;
+    margin: 8vw 0;
+  }
+}
+
+@include medium {
+  .nav-bar {
+    display: flex;
+    height: 10.41vw;
+    justify-content: space-between;
+    &__logo {
+      width: 15vw;
+      height: 10.4vw;
+      margin: 0;
+    }
+    &__input {
+      width: 30vw;
+      height: 6vw;
+      font-size: 1.8vw;
+      border-radius: 0.8vw;
+      padding: 0 7vw;
+      background-position-x: 3vw;
+      border: solid 0.1vw $Mercury;
+    }
+    &__input-box {
+      width: 15vw;
+      height: 10.41vw;
+      margin-left: 3.1vw;
+    }
+    &__button {
+      width: 12vw;
+      height: 8vw;
+      font-size: 2vw;
+      border-radius: 0.8vw;
+      background-size: 2vw;
+      background-position-x: 2vw;
+      margin: 0 3.1vw;
+      height: 6vw;
+      font-size: 1.7vw;
+      text-align: right;
+      padding-right: 3vw;
+    }
+    &__image {
+      width: 7vw;
+      height: 7vw;
+      margin: 0 3vw 0 1vw;
+    }
+    &__box {
+      flex-direction: row;
+      height: 10.41vw;
+    }
+  }
+}
+
+@include huge {
+  .nav-bar {
+    height: 5.1vw;
+    margin-top: 0.5vw;
+    justify-content: space-evenly;
+    &__logo {
+      width: 10vw;
+      height: 5vw;
+    }
+    &__input {
+      width: 20vw;
+      height: 3vw;
+      font-size: 1.1vw;
+      padding: 0 3vw;
+      background-position-x: 1.3vw;
+      border-radius: 0.3vw;
+    }
+    &__input-box {
+      width: 10vw;
+      height: 5vw;
+    }
+    &__button {
+      font-size: 1.1vw;
+      background-size: 1.3vw;
+      margin-left: 0;
+      margin-right: 1vw;
+      width: 8vw;
+      height: 3vw;
+      border-radius: 0.4vw;
+      padding-right: 2vw;
+    }
+    &__button-and-image {
+      margin: 0 1.5vw;
+    }
+    &__image {
+      width: 3vw;
+      height: 3vw;
+      margin: 0;
+    }
+    &__box {
+      height: 5vw;
+      margin-left: 20vw;
+    }
+  }
+}

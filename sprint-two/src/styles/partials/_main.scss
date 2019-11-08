@@ -1,0 +1,31 @@
+.main__video {
+  margin-top: 5vw;
+  &-video {
+    width: 100%;
+    height: 57.2vw;
+  }
+}
+
+@include medium {
+  .main__video {
+    margin-top: 0;
+    &-poster {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+    }
+    &-video {
+      width: 91.1vw;
+      height: 52vw;
+    }
+  }
+}
+
+@include huge {
+  .main__video {
+    &-video {
+      width: 65.5vw;
+      height: 37.5vw;
+    }
+  }
+}
