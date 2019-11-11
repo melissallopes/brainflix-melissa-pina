@@ -75,7 +75,6 @@ class Comments extends React.Component {
                 </label>
                 <textarea
                   className="comments__text-area"
-                  value={newComment}
                   onChange={handleChange}
                   placeholder="Add a comment"
                 ></textarea>
