@@ -10,13 +10,14 @@ class Aside extends React.Component {
     const mapVideos = AsideInfo.map(info => {
       return (
         <div className="aside__next-videos" key={info.id}>
-          <Link to={`/${info.id}`}>
+          <Link to={`/${info.id}`} className="aside__link--no-decoration">
             <img className="aside__photos" src={info.image} alt="img"></img>
+
+            <div className="aside__div-titles">
+              <h3 className="aside__descript">{info.title}</h3>
+              <p className="aside__text">{info.channel}</p>
+            </div>
           </Link>
-          <div className="aside__div-titles">
-            <h3 className="aside__descript">{info.title}</h3>
-            <p className="aside__text">{info.channel}</p>
-          </div>
         </div>
       );
     });

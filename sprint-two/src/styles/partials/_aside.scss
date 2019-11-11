@@ -20,14 +20,21 @@
     border-radius: 1.5vw;
     margin-right: 4vw;
   }
+  &__link--no-decoration {
+    text-decoration: none;
+    color: $Black;
+    display: flex;
+  }
   &__descript {
     font-family: AvenirMedium;
     font-size: 5vw;
     margin: 0;
+    text-decoration: none;
   }
   &__text {
     font-family: AvenirLight;
     margin: 3vw 0;
+    text-decoration: none;
   }
 }
 
@@ -41,6 +48,9 @@
     }
     &__descript {
       font-size: 1.8vw;
+    }
+    &__div-titles {
+      width: 22vw;
     }
     &__text {
       font-size: 1.5vw;
@@ -72,6 +82,9 @@
     }
     &__descript {
       font-size: 1vw;
+    }
+    &__div-titles {
+      width: 12vw;
     }
     &__text {
       font-size: 0.9vw;

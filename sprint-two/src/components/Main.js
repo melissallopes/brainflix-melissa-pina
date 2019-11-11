@@ -2,8 +2,10 @@ import React, { Component } from "react";
 
 class Main extends React.Component {
   render() {
-    const proxy = "cors-anywhere.herokuapp.com";
-    const mainVideo = `${proxy}${this.props.mainVideo}`;
+    // const proxy = "cors-anywhere.herokuapp.com";
+    const mainVideo = this.props.mainVideo;
+
+    // ${ proxy }
 
     return (
       <div className="main__video">

@@ -11,3 +11,15 @@
     @content;
   }
 }
+
+@mixin huge-medium {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin super {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}

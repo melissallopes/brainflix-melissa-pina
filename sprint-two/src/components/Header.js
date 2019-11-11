@@ -21,9 +21,7 @@ class Header extends React.Component {
           ></input>
           <div className="nav-bar__button-and-image">
             <Link to="/Upload">
-              <button className="nav-bar__button" type="">
-                UPLOAD
-              </button>
+              <button className="nav-bar__button">UPLOAD</button>
             </Link>
             <img className="nav-bar__image" src={NavImg} alt="img" />
           </div>

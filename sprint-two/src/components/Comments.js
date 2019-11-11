@@ -6,6 +6,9 @@ import iconViews from "../assets/icons/SVG/views.svg";
 class Comments extends React.Component {
   render() {
     const mainVideo = this.props.mainVideo;
+    const handleChange = this.props.handleChange;
+    const handleSubmit = this.props.handleSubmit;
+    const newComment = this.props.newComment;
 
     const commentsList = mainVideo.comments.map(comments => {
       return (
@@ -72,11 +75,14 @@ class Comments extends React.Component {
                 </label>
                 <textarea
                   className="comments__text-area"
+                  value={newComment}
+                  onChange={handleChange}
                   placeholder="Add a comment"
-                  // onClick= {this.handleClick}
                 ></textarea>
               </div>
-              <button className="comments__button">COMMENT</button>
+              <button className="comments__button" onSubmit={handleSubmit}>
+                COMMENT
+              </button>
             </div>
           </div>
           <div className="comments__area">{commentsList}</div>
