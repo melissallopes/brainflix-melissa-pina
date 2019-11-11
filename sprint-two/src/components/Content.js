@@ -9,7 +9,6 @@ class Content extends React.Component {
   state = {
     AsideInfo: undefined,
     mainVideo: undefined,
-    cut: undefined,
     newComment: {
       name: "",
       comment: ""
@@ -87,8 +86,7 @@ class Content extends React.Component {
 
     //pushing main video back to AsideInfo array before filter
     if (this.state.mainVideo) {
-      this.state.cut = this.state.mainVideo;
-      this.state.AsideInfo.push(this.state.cut);
+      this.state.AsideInfo.push(this.state.mainVideo);
     }
 
     //filtering to select all videos except the main
