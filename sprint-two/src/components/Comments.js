@@ -8,7 +8,7 @@ class Comments extends React.Component {
     const mainVideo = this.props.mainVideo;
     const handleChange = this.props.handleChange;
     const handleSubmit = this.props.handleSubmit;
-    const newComment = this.props.newComment;
+    const newComment = this.props.newComment.requiredProperties;
 
     const commentsList = mainVideo.comments.map(comments => {
       return (
@@ -75,11 +75,12 @@ class Comments extends React.Component {
                 </label>
                 <textarea
                   className="comments__text-area"
+                  value={newComment}
                   onChange={handleChange}
                   placeholder="Add a comment"
                 ></textarea>
               </div>
-              <button className="comments__button" onSubmit={handleSubmit}>
+              <button className="comments__button" onClick={handleSubmit}>
                 COMMENT
               </button>
             </div>
