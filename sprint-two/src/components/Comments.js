@@ -6,9 +6,7 @@ import iconViews from "../assets/icons/SVG/views.svg";
 class Comments extends React.Component {
   render() {
     const mainVideo = this.props.mainVideo;
-    const handleChange = this.props.handleChange;
     const handleSubmit = this.props.handleSubmit;
-    const newComment = this.props.newComment.requiredProperties;
 
     const commentsList = mainVideo.comments.map(comments => {
       return (
@@ -24,6 +22,8 @@ class Comments extends React.Component {
         </div>
       );
     });
+
+    commentsList.reverse();
 
     return (
       <div>
@@ -66,7 +66,7 @@ class Comments extends React.Component {
         <div className="comments__form">
           <h2 className="comments__title">3 Comments</h2>
 
-          <div className="comments__input-box">
+          <form className="comments__input-box" onSubmit={handleSubmit}>
             <img className="comments__side-img" src={NavImg} alt="img"></img>
             <div className="comments__input">
               <div className="comments__com-and-label">
@@ -75,16 +75,13 @@ class Comments extends React.Component {
                 </label>
                 <textarea
                   className="comments__text-area"
-                  value={newComment}
-                  onChange={handleChange}
+                  name="inputComment"
                   placeholder="Add a comment"
                 ></textarea>
               </div>
-              <button className="comments__button" onClick={handleSubmit}>
-                COMMENT
-              </button>
+              <button className="comments__button">COMMENT</button>
             </div>
-          </div>
+          </form>
           <div className="comments__area">{commentsList}</div>
         </div>
       </div>

@@ -11,9 +11,7 @@ class Content extends React.Component {
     mainVideo: undefined,
     newComment: {
       name: "",
-      comment: "",
-      id: "",
-      timestamp: ""
+      comment: ""
     }
   };
 
@@ -25,8 +23,6 @@ class Content extends React.Component {
           <div className="section-divisor">
             <Comments
               mainVideo={this.state.mainVideo}
-              newComment={this.state.newComment}
-              handleChange={this.handleChange}
               handleSubmit={this.handleSubmit}
             />
             <Aside AsideInfo={this.state.AsideInfo} />
@@ -53,37 +49,12 @@ class Content extends React.Component {
     });
   }
 
-  componentWillUpdate() {
-    this.handleChange = event => {
-      this.setState({
-        newComment: event.target.value
-      });
-    };
-
-    this.handleSubmit = event => {
-      event.preventDefault();
-      const APIurl = "https://project-2-api.herokuapp.com";
-      const APIkey = "?api_key=062177a7-15a0-49cf-9325-6ebd2e9b39ad";
-
-      axios
-        .post(APIurl + "/videos/" + this.props.id + "/comments" + APIkey, {
-          newComment: this.state.newComment
-        })
-        .then(response => {
-          console.log(response);
-          // this.setState(prevState => ({
-          //   mainVideo: [this.state.newComment, ...prevState.mainVideo.comments]
-          // }));
-        });
-    };
-  }
-
-  componentDidUpdate(previous) {
+  componentDidUpdate(prevProps, prevState) {
     const APIurl = "https://project-2-api.herokuapp.com";
     const APIkey = "?api_key=062177a7-15a0-49cf-9325-6ebd2e9b39ad";
 
     //pushing main video back to AsideInfo array before filter
-    if (this.props !== previous) {
+    if (this.props !== prevProps) {
       if (this.state.mainVideo) {
         this.setState({
           AsideInfo: [...this.state.AsideInfo, this.state.mainVideo]
@@ -96,7 +67,10 @@ class Content extends React.Component {
       return video.id !== this.props.id;
     });
 
-    if (this.props !== previous) {
+    if (
+      this.props !== prevProps ||
+      prevState.newComment !== this.state.newComment
+    ) {
       axios.get(APIurl + "/videos/" + this.props.id + APIkey).then(response => {
         this.setState({
           mainVideo: response.data,
@@ -104,6 +78,24 @@ class Content extends React.Component {
         });
       });
     }
+
+    this.handleSubmit = event => {
+      event.preventDefault();
+      const APIurl = "https://project-2-api.herokuapp.com";
+      const APIkey = "?api_key=062177a7-15a0-49cf-9325-6ebd2e9b39ad";
+
+      axios
+        .post(APIurl + "/videos/" + this.props.id + "/comments" + APIkey, {
+          name: "user",
+          comment: event.target.inputComment.value
+        })
+        .then(response => {
+          console.log(response);
+          this.setState({
+            newComment: response.data
+          });
+        });
+    };
   }
 }
 
