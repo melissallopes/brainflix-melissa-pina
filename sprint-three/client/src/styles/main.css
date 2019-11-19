@@ -366,6 +366,8 @@
   .main__video-video {
     width: 91.1vw;
     height: 52vw;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
