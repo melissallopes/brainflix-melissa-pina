@@ -1,0 +1,25 @@
+/*media query for 768px tablet*/
+@mixin medium {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+/* media query for 1440 pixel density desktops */
+@mixin huge {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin huge-medium {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin super {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}

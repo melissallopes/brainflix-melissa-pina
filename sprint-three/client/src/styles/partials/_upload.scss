@@ -1,0 +1,288 @@
+.upload {
+  height: fit-content;
+  padding-top: 5vw;
+  margin-top: 5vw;
+  border-top: solid 0.2vw $Mercury;
+  &__title {
+    font-family: AvenirBold;
+    font-size: 8vw;
+    margin: 5vw;
+  }
+
+  &__video-label {
+    color: $Silver;
+    font-family: AvenirDemi;
+    font-size: 3.2vw;
+    margin: 10vw 5vw 2vw;
+  }
+
+  &__img {
+    width: 90vw;
+    height: 47.8vw;
+    border-radius: 1.2vw;
+    margin: 5vw;
+    margin-top: 1.5vw;
+  }
+
+  &__title-label {
+    text-transform: uppercase;
+    color: $Silver;
+    font-family: AvenirDemi;
+    font-size: 3.2vw;
+    margin: 10vw 5vw 2vw;
+  }
+
+  &__input-name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title-add {
+    width: 90vw;
+    height: 13vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 0.4vw solid #e1e1e1;
+    border-radius: 1.2vw;
+    background-color: #fafafa;
+    font-family: AvenirLight;
+    padding: 3vw;
+    &:active {
+      border: 0.4vw solid $Brainflix-blu;
+    }
+  }
+
+  &__div-text {
+    height: 60vw;
+    padding-top: 7.5vw;
+  }
+
+  &__text-label {
+    text-transform: uppercase;
+    color: $Silver;
+    font-family: AvenirDemi;
+    font-size: 3.2vw;
+    margin: 7.5vw 5vw 2vw;
+  }
+  &__text-add {
+    width: 90vw;
+    height: 44.6vw;
+    margin: 2vw 5vw;
+    box-sizing: border-box;
+    border: 0.4vw solid $Mercury;
+    border-radius: 1.2vw;
+    background-color: $Alabaster;
+    font-family: AvenirLight;
+    padding: 4vw;
+    &:active {
+      border: 0.4vw solid $Brainflix-blu;
+    }
+  }
+
+  &__button-publish {
+    font-family: AvenirMedium;
+    margin-left: 5vw;
+    background-color: $Brainflix-blu;
+    border-radius: 1.2vw;
+    color: $White;
+    padding: 15px 32px;
+    font-size: 4vw;
+    border-style: none;
+    cursor: pointer;
+    width: 70vw;
+
+    &:hover {
+      background-color: $Brainflix-blue;
+    }
+  }
+
+  &__button-cancel {
+    font-family: AvenirMedium;
+    background-color: $White;
+    border-radius: 2vw;
+    color: $Brainflix-blu;
+    padding: 15px 32px;
+    font-size: 4vw;
+    border-style: none;
+    cursor: pointer;
+    width: 70vw;
+    margin: 5vw;
+  }
+}
+
+@include medium {
+  .upload {
+    margin-top: 0;
+    border-top: solid 0.1vw #e1e1e1;
+    &__title {
+      border-bottom: solid 0.1vw #e1e1e1;
+      padding-bottom: 7vw;
+      font-size: 5vw;
+      margin: 6.2vw 4.1vw 5.2vw 4vw;
+    }
+    &__img {
+      width: 44.7vw;
+      height: 23.8vw;
+      margin: 0 4vw;
+      border-radius: 0.4vw;
+    }
+    &__div-video {
+      display: flex;
+      flex-direction: column;
+    }
+    &__video-label {
+      font-size: 1.5vw;
+      margin: 5.2vw 4vw 1vw;
+    }
+
+    &__title-label {
+      font-size: 1.5vw;
+      margin: 5.2vw 4vw 1vw;
+    }
+
+    &__title-add {
+      width: 92vw;
+      border: 0.1vw solid #e1e1e1;
+      border-radius: 0.8vw;
+      height: 7.7vw;
+      padding: 1.5vw;
+      margin-left: 4vw;
+    }
+
+    &__div-text {
+      padding-top: 4vw;
+      height: fit-content;
+      padding-bottom: 3.2vw;
+      border-bottom: solid 0.1vw #e1e1e1;
+    }
+
+    &__text-label {
+      font-size: 1.5vw;
+      margin-left: 4vw;
+    }
+    &__text-add {
+      width: 92vw;
+      border: 0.1vw solid #e1e1e1;
+      height: 20vw;
+      margin-top: 1vw;
+      margin-left: 4vw;
+      padding: 2vw;
+    }
+    &__div-button {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    &__button-publish {
+      width: 15vw;
+      font-size: 1.7vw;
+      border-radius: 0.8vw;
+      height: 4vw;
+      margin: 0;
+      margin-right: 4vw;
+    }
+
+    &__button-cancel {
+      width: 5vw;
+      font-size: 1.7vw;
+      border-radius: 0.8vw;
+      height: 4vw;
+    }
+  }
+}
+
+@include huge {
+  .upload {
+    &__title {
+      font-size: 3vw;
+      margin: 2vw;
+      margin-left: 11vw;
+      padding-bottom: 3vw;
+      width: 75vw;
+    }
+
+    &__div-huge {
+      display: flex;
+    }
+    &__img {
+      width: 27vw;
+      height: 15vw;
+    }
+    &__video-label {
+      font-size: 0.9vw;
+      align-self: self-end;
+      margin-left: 1.5vw;
+    }
+    &__title-label {
+      font-size: 0.9vw;
+      margin: 5vw 0 0vw;
+    }
+    &__title-add {
+      width: 44vw;
+      border: 0.1vw solid #e1e1e1;
+      height: 3.5vw;
+      border-radius: 0.4vw;
+      margin: 0.5vw 0 0 0;
+      padding: 0.8vw 1.8vw;
+    }
+    &__div-video {
+      height: fit-content;
+      width: 32vw;
+      margin-left: 11vw;
+      align-items: flex-end;
+      padding-bottom: 5vw;
+      border-bottom: 0.1vw solid #e1e1e1;
+    }
+    &__div-text {
+      padding: 1.5vw 0;
+      border: none;
+      margin-bottom: 2.8vw;
+    }
+    &__div-button {
+      border-top: 0.1vw solid #e1e1e1;
+      width: 44vw;
+    }
+    &__text-label {
+      font-size: 0.9vw;
+      margin-left: 0;
+    }
+    &__text-add {
+      width: 44vw;
+      border: 0.1vw solid #e1e1e1;
+      border-radius: 0.4vw;
+      margin: 0.5vw 0 0 0;
+      padding: 0.8vw 1.8vw;
+      height: 8.5vw;
+    }
+    &__button-publish {
+      font-size: 1.1vw;
+      width: 9vw;
+      height: 2vw;
+      border-radius: 0.4vw;
+      margin-right: 0;
+    }
+    &__button-cancel {
+      font-size: 1.1vw;
+      width: 9vw;
+      height: 2vw;
+      border-radius: 0.4vw;
+      margin: 5vw 2vw;
+    }
+  }
+}
+
+@include huge-medium {
+  .upload {
+    &__div-text {
+      margin-bottom: 3.3vw;
+    }
+  }
+}
+
+@include super {
+  .upload {
+    &__div-text {
+      margin-bottom: 3.6vw;
+    }
+  }
+}
