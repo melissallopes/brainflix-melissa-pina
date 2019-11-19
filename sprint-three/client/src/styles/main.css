@@ -1020,7 +1020,7 @@
 
 @media only screen and (min-width: 1024px) {
   .upload__title {
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin: 2vw;
     margin-left: 11vw;
     padding-bottom: 3vw;
@@ -1033,7 +1033,7 @@
   }
   .upload__img {
     width: 27vw;
-    height: 15vw;
+    height: 16vw;
   }
   .upload__video-label {
     font-size: 0.9vw;
@@ -1041,6 +1041,7 @@
         -ms-grid-row-align: self-end;
         align-self: self-end;
     margin-left: 1.5vw;
+    margin-bottom: 0.5vw;
   }
   .upload__title-label {
     font-size: 0.9vw;
@@ -1063,7 +1064,7 @@
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding-bottom: 5vw;
+    padding-bottom: 4.65vw;
     border-bottom: 0.1vw solid #e1e1e1;
   }
   .upload__div-text {
@@ -1085,7 +1086,7 @@
     border-radius: 0.4vw;
     margin: 0.5vw 0 0 0;
     padding: 0.8vw 1.8vw;
-    height: 8.5vw;
+    height: 8.7vw;
   }
   .upload__button-publish {
     font-size: 1.1vw;
@@ -1111,7 +1112,7 @@
 
 @media only screen and (min-width: 1440px) {
   .upload__div-text {
-    margin-bottom: 3.6vw;
+    margin-bottom: 3.5vw;
   }
 }
 

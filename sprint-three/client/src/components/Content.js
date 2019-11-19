@@ -66,11 +66,6 @@ class Content extends React.Component {
       return video.id !== this.props.id;
     });
 
-    // if statement to prevent 2 equal videos
-    // this.state.AsideInfo = this.state.AsideInfo.filter(video => {
-    //   return video.id
-    // })
-
     if (
       this.props !== prevProps ||
       prevState.newComment !== this.state.newComment
